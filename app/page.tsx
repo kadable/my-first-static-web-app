@@ -1,4 +1,5 @@
 import { unstable_noStore as noStore } from 'next/cache';
+import { CurrentTimeFromAPI } from './components/currentTimeFromApi';
 
 export default function Home() {
     noStore();
@@ -9,6 +10,7 @@ export default function Home() {
             <div>
                 This is a Next.js application hosted on Azure Static Web Apps with hybrid rendering. The time on the server is <strong>{timeOnServer}</strong>.
             </div>
+            <CurrentTimeFromAPI />
         </main>
     );
 }
